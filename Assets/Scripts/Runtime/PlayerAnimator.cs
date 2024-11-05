@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
+    
+
+    private void Start()
     {
-        
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+
+    }
+    public void playRunAnimation()
+    {
+        _animator.SetBool("IsMoving", true);
+    }
+    public void playIdleAnimation()
+    {
+        _animator.SetBool("IsMoving", false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void flipSprite(bool isFlip){
+        _spriteRenderer.flipX = isFlip;
     }
 }

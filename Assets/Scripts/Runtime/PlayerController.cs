@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,14 +7,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float mSpd = 2f; 
-    // Start is called before the first frame update
+    [SerializeField] private float mSpd = 2f;
+    private PlayerAnimator _playerAnimator; 
+   
     void Start()
     {
-        
+        _playerAnimator = GetComponent<PlayerAnimator>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         Move();
@@ -23,8 +25,35 @@ public class PlayerController : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+        
+        if ((horizontal !=0) || (vertical !=0))
+        {
+            _playerAnimator.playRunAnimation();
+
+            if(horizontal > 0.000001f){
+                _playerAnimator.flipSprite(false);
+            }
+            else{
+                _playerAnimator.flipSprite(true);
+            }
+        }
+        else
+        {
+            _playerAnimator.playIdleAnimation();
+        }
+        
         Vector2 direction = new Vector2(horizontal, vertical);
         transform.Translate(direction * mSpd * Time.deltaTime);
+
+    }
+
+    void Attack(){
+        //manages player attack melee or range
+    }
+
+    void Hurt(){
+        //manages player health and damage taken
+
     }
 
 }
