@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float mSpd = 2f;
     private PlayerAnimator _playerAnimator; 
+    // private bool lastHMoveRight;
    
     void Start()
     {
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
             if(horizontal > 0.000001f){
                 _playerAnimator.flipSprite(false);
             }
-            else{
+            if(horizontal < -0.000001f){
                 _playerAnimator.flipSprite(true);
             }
         }

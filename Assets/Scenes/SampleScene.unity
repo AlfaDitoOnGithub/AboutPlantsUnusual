@@ -270,8 +270,8 @@ GameObject:
   - component: {fileID: 528224502}
   - component: {fileID: 528224501}
   - component: {fileID: 528224503}
-  - component: {fileID: 528224504}
   - component: {fileID: 528224505}
+  - component: {fileID: 528224504}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
