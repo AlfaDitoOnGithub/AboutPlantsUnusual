@@ -47,6 +47,15 @@ TagManager:
   - name: Collisions
     uniqueID: 3727610093
     locked: 0
+  - name: WalkInfron
+    uniqueID: 3668327671
+    locked: 0
+  - name: Player
+    uniqueID: 259431279
+    locked: 0
   - name: WalkBehind
     uniqueID: 1214331781
+    locked: 0
+  - name: Decor
+    uniqueID: 2496455731
     locked: 0
