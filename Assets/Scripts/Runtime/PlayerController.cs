@@ -9,20 +9,23 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float mSpd = 2f;
     private PlayerAnimator _playerAnimator; 
-    // private bool lastHMoveRight;
+    private Rigidbody2D _rb;
+   
    
     void Start()
     {
         _playerAnimator = GetComponent<PlayerAnimator>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     
     void Update()
     {
-        Move();
+        MovePhysics();
     }
 
-    void Move()
+   
+    void MovePhysics()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -45,7 +48,8 @@ public class PlayerController : MonoBehaviour
         
         Vector2 direction = new Vector2(horizontal, vertical);
         transform.Translate(direction * mSpd * Time.deltaTime);
-
+        _rb.velocity = direction * mSpd;
+        //transform.Translate(direction * mSpd * Time.deltaTime);
     }
 
     void Attack(){
