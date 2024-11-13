@@ -47,7 +47,6 @@ public class PlayerController : MonoBehaviour
         }
         
         Vector2 direction = new Vector2(horizontal, vertical);
-        transform.Translate(direction * mSpd * Time.deltaTime);
         _rb.velocity = direction * mSpd;
         //transform.Translate(direction * mSpd * Time.deltaTime);
     }
