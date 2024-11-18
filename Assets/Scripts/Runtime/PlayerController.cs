@@ -5,9 +5,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float mSpd = 2f;
+  
     private PlayerAnimator _playerAnimator; 
     private Rigidbody2D _rb;
    
@@ -53,11 +55,6 @@ public class PlayerController : MonoBehaviour
 
     void Attack(){
         //manages player attack melee or range
-    }
-
-    void Hurt(){
-        //manages player health and damage taken
-
     }
 
 }
