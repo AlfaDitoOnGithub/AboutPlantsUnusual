@@ -139,10 +139,10 @@ TextureImporter:
       name: frog-full_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 14
         y: 192
-        width: 64
-        height: 64
+        width: 36
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: frog-full_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 78
         y: 192
-        width: 64
-        height: 64
+        width: 36
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: frog-full_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 142
         y: 192
-        width: 64
-        height: 64
+        width: 36
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: frog-full_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 206
         y: 192
-        width: 64
-        height: 64
+        width: 36
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: frog-full_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 270
         y: 192
-        width: 64
-        height: 64
+        width: 36
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: frog-full_5
       rect:
         serializedVersion: 2
-        x: 0
+        x: 13
         y: 128
-        width: 64
-        height: 64
+        width: 43
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: frog-full_6
       rect:
         serializedVersion: 2
-        x: 64
+        x: 74
         y: 128
-        width: 64
-        height: 64
+        width: 47
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: frog-full_7
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
+        x: 132
+        y: 130
+        width: 55
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: frog-full_8
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 64
+        x: 194
+        y: 134
+        width: 60
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: frog-full_9
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
-        width: 64
-        height: 64
+        x: 261
+        y: 133
+        width: 58
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: frog-full_10
       rect:
         serializedVersion: 2
-        x: 320
+        x: 327
         y: 128
-        width: 64
-        height: 64
+        width: 53
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: frog-full_11
       rect:
         serializedVersion: 2
-        x: 384
+        x: 400
         y: 128
-        width: 64
-        height: 64
+        width: 45
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: frog-full_12
       rect:
         serializedVersion: 2
-        x: 448
+        x: 462
         y: 128
-        width: 64
-        height: 64
+        width: 36
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +412,10 @@ TextureImporter:
       name: frog-full_13
       rect:
         serializedVersion: 2
-        x: 0
+        x: 14
         y: 64
-        width: 64
-        height: 64
+        width: 36
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: frog-full_14
       rect:
         serializedVersion: 2
-        x: 64
+        x: 77
         y: 64
-        width: 64
-        height: 64
+        width: 39
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +454,10 @@ TextureImporter:
       name: frog-full_15
       rect:
         serializedVersion: 2
-        x: 128
+        x: 141
         y: 64
-        width: 64
-        height: 64
+        width: 41
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +475,10 @@ TextureImporter:
       name: frog-full_16
       rect:
         serializedVersion: 2
-        x: 192
+        x: 205
         y: 64
-        width: 64
-        height: 64
+        width: 42
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,10 +496,10 @@ TextureImporter:
       name: frog-full_17
       rect:
         serializedVersion: 2
-        x: 256
+        x: 270
         y: 64
-        width: 64
-        height: 64
+        width: 43
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +517,10 @@ TextureImporter:
       name: frog-full_18
       rect:
         serializedVersion: 2
-        x: 320
+        x: 335
         y: 64
-        width: 64
-        height: 64
+        width: 46
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +538,10 @@ TextureImporter:
       name: frog-full_19
       rect:
         serializedVersion: 2
-        x: 384
+        x: 399
         y: 64
-        width: 64
-        height: 64
+        width: 48
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +559,10 @@ TextureImporter:
       name: frog-full_20
       rect:
         serializedVersion: 2
-        x: 448
+        x: 463
         y: 64
-        width: 64
-        height: 64
+        width: 39
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +580,10 @@ TextureImporter:
       name: frog-full_21
       rect:
         serializedVersion: 2
-        x: 0
+        x: 14
         y: 0
-        width: 64
-        height: 64
+        width: 36
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: frog-full_22
       rect:
         serializedVersion: 2
-        x: 64
+        x: 78
         y: 0
-        width: 64
-        height: 64
+        width: 36
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,10 +622,10 @@ TextureImporter:
       name: frog-full_23
       rect:
         serializedVersion: 2
-        x: 128
+        x: 142
         y: 0
-        width: 64
-        height: 64
+        width: 36
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +643,10 @@ TextureImporter:
       name: frog-full_24
       rect:
         serializedVersion: 2
-        x: 192
+        x: 206
         y: 0
-        width: 64
-        height: 64
+        width: 36
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

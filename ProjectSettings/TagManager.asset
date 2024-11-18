@@ -44,11 +44,14 @@ TagManager:
   - name: Ground
     uniqueID: 764261817
     locked: 0
+  - name: WalkInfron
+    uniqueID: 3668327671
+    locked: 0
   - name: Collisions
     uniqueID: 3727610093
     locked: 0
-  - name: WalkInfron
-    uniqueID: 3668327671
+  - name: Enemies
+    uniqueID: 3340510041
     locked: 0
   - name: Player
     uniqueID: 259431279
