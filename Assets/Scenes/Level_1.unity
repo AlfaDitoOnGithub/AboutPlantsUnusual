@@ -2678,8 +2678,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8319,6 +8319,7 @@ MonoBehaviour:
   uiTextPrompt: {fileID: 490004794}
   uiText: {fileID: 218389372}
   gerbang: {fileID: 449468065}
+  tutup: 0
   findLever:
     m_PersistentCalls:
       m_Calls:
@@ -8473,7 +8474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a441aed51a1ee594c977c224ed006a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mSpd: 16
+  mSpd: 8
 --- !u!212 &1826806186
 SpriteRenderer:
   m_ObjectHideFlags: 0
