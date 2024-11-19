@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Level1Event : MonoBehaviour
+public class Level1Event_lever : MonoBehaviour
 {
    [SerializeField] private bool leverActivate = false;
    [SerializeField] private GameObject uiTextPrompt;
@@ -42,15 +42,20 @@ public class Level1Event : MonoBehaviour
         Debug.Log("Tombol dipencet");
         
        }
+
+      
    }
    public void Interact(){
 
-
+    
     gateOpen.Invoke();
     Debug.Log("Gerbang dibuka");
+    if(gerbang.transform.position.y < -25.0f){
     gerbang.transform.Translate(0.0f, 4.0f, 0.0f);
-    Debug.Log("posisi gerbang besi kedua=" + gerbang.transform.position);
         
+    }
+    Debug.Log("posisi gerbang besi kedua=" + gerbang.transform.position);
+      
 
 
    }
