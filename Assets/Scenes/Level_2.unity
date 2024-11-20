@@ -315,7 +315,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 14
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -340,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 95881324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3, y: -45.3, z: -9}
+  m_LocalPosition: {x: 4.3, y: -46.06, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3473,8 +3473,8 @@ Transform:
   m_GameObject: {fileID: 1826806180}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3, y: -45.3, z: 1}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_LocalPosition: {x: 4.3, y: -46.06, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1858323640}
@@ -4734,7 +4734,7 @@ GameObject:
   - component: {fileID: 1994262697}
   - component: {fileID: 1994262698}
   m_Layer: 0
-  m_Name: object assests 1_14
+  m_Name: 'door '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4846,7 +4846,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1826806187}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 14
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -4872,7 +4872,7 @@ Transform:
   m_GameObject: {fileID: 2022121828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3, y: -45.3, z: -9}
+  m_LocalPosition: {x: 4.3, y: -46.06, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
