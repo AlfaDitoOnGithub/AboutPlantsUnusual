@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class HurtboxController : MonoBehaviour
 {
     [SerializeField] private bool enemyAttack = false;
-    public int HealthPlayer;
+    public int HealthPlayer = 10;
     private PlayerAnimator _playerAnimator; 
     private Rigidbody2D _rb;
    
