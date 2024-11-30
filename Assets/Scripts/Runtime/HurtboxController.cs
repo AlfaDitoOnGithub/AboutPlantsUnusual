@@ -12,16 +12,18 @@ public class HurtboxController : MonoBehaviour
     
     private PlayerAnimator _playerAnimator; 
     // private Rigidbody2D _rb;
+    private HealthSystem playerHealth;
 
 
     void Start()
     {
         _playerAnimator = GetComponent<PlayerAnimator>();
         // _rb = GetComponent<Rigidbody2D>();
+        playerHealth = new HealthSystem(10);
     }
      public void OnTriggerEnter2D(Collider2D other)
    {
-       if (other.CompareTag("EnemyAttack"))
+       if (other.CompareTag("Enemy"))
        {
         enemyAttack = true;
         
@@ -31,7 +33,7 @@ public class HurtboxController : MonoBehaviour
 
    public void OnTriggerExit2D(Collider2D other)
    {
-       if (other.CompareTag("EnemyAttack"))
+       if (other.CompareTag("Enemy"))
        {
         enemyAttack = false;
         Debug.Log("Attack musuh tidak ada");
@@ -52,7 +54,7 @@ public class HurtboxController : MonoBehaviour
 
     void Hurt(){
         //manages player health and damage taken
-        //healthPlayer-=1;
+        playerHealth.Damage(1);
        _playerAnimator.playHurtAnimation();
         //if(healthPlayer <= 0){
             //GAME OVER SCREEN
