@@ -9,11 +9,12 @@ using UnityEngine.Events;
 public class HurtboxController : MonoBehaviour
 {
     [SerializeField] private bool enemyAttack = false;
-    public int HealthPlayer = 10;
+    private int healthPlayer = 10;
     private PlayerAnimator _playerAnimator; 
     private Rigidbody2D _rb;
-   
-   
+
+    public int HealthPlayer { get => healthPlayer; set => healthPlayer = value; }
+
     void Start()
     {
         _playerAnimator = GetComponent<PlayerAnimator>();
