@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,16 +8,16 @@ using UnityEngine.Events;
 public class HurtboxController : MonoBehaviour
 {
     [SerializeField] private bool enemyAttack = false;
-    private int healthPlayer = 10;
+    
+    
     private PlayerAnimator _playerAnimator; 
-    private Rigidbody2D _rb;
+    // private Rigidbody2D _rb;
 
-    public int HealthPlayer { get => healthPlayer; set => healthPlayer = value; }
 
     void Start()
     {
         _playerAnimator = GetComponent<PlayerAnimator>();
-        _rb = GetComponent<Rigidbody2D>();
+        // _rb = GetComponent<Rigidbody2D>();
     }
      public void OnTriggerEnter2D(Collider2D other)
    {
@@ -53,9 +52,13 @@ public class HurtboxController : MonoBehaviour
 
     void Hurt(){
         //manages player health and damage taken
-       HealthPlayer-=1;
+        //healthPlayer-=1;
        _playerAnimator.playHurtAnimation();
+        //if(healthPlayer <= 0){
+            //GAME OVER SCREEN
+        //}
 
     }
+
 
 }

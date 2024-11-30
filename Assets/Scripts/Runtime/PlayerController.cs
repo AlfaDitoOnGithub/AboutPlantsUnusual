@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
   
     private PlayerAnimator _playerAnimator; 
     private Rigidbody2D _rb;
+    // private HealthBarScript healthBar;
    
    
     void Start()

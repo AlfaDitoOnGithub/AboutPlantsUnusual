@@ -23,6 +23,10 @@ public class PlayerAnimator : MonoBehaviour
         _animator.SetBool("IsMoving", false);
     }
 
+    public void playHurtAnimation(){
+        _animator.SetTrigger("Hurt");
+    }
+
     public void flipSprite(bool isFlip){
         _spriteRenderer.flipX = isFlip;
     }
