@@ -9,6 +9,7 @@ using UnityEngine.Events;
 public class HurtboxController : MonoBehaviour
 {
     [SerializeField] private bool enemyAttack = false;
+    public int HealthPlayer;
     private PlayerAnimator _playerAnimator; 
     private Rigidbody2D _rb;
    
@@ -33,7 +34,7 @@ public class HurtboxController : MonoBehaviour
        if (other.CompareTag("EnemyAttack"))
        {
         enemyAttack = false;
-        Debug.Log("Attack musuh tidak ada Keluar");
+        Debug.Log("Attack musuh tidak ada");
         
        }
    }
@@ -43,17 +44,16 @@ public class HurtboxController : MonoBehaviour
         if (enemyAttack)
         {
             //do something
+            Hurt();
         }
     }
 
-   
-    void Attack(){
-        //manages player attack melee or range
-    }
+
 
     void Hurt(){
         //manages player health and damage taken
-       
+       HealthPlayer-=1;
+       _playerAnimator.playHurtAnimation();
 
     }
 

@@ -6,19 +6,19 @@ using CodeMonkey.Utils;
 public class BulletScript : MonoBehaviour
 {
    private Vector3 shootDir;
-   //private Rigidbody2D _rb;
+  
    
    public void Setup(Vector3 shootDir){
     this.shootDir = shootDir;
-    Destroy(gameObject, 3f);
+    Destroy(gameObject, 1f);
    }
 
    
    private void Update()
    {
-       float moveSpeed = 100f;
+       float moveSpeed = 10f;
        transform.position += shootDir * moveSpeed * Time.deltaTime;
-       //_rb.velocity = shootDir * moveSpeed;
+       
    }
 
    
