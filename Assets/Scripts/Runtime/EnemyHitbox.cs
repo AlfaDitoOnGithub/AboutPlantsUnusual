@@ -6,26 +6,41 @@ using CodeMonkey.Utils;
 
 public class EnemyHitbox : MonoBehaviour {
 
-private static List<EnemyHitbox> enemyList;
-private Animator spriteAnimator;
-[SerializeField] private int health;
 
-    private void Awake()
+private Transform spriteTransform;
+private Animator spriteAnimator;
+[SerializeField] private int health = 3;
+// private bool bulletContact =false;
+private HealthSystem enemyHealth;
+
+    private void Start()
     {
-        if (enemyList == null){enemyList = new List<EnemyHitbox>();};
-        enemyList.Add(this);
-        spriteAnimator = transform.Find("Sprite").GetComponent<Animator>();
+        spriteTransform = transform.Find("Sprite");
+        spriteAnimator = spriteTransform.GetComponent<Animator>();
+        enemyHealth = new HealthSystem(health);
     }
+
+    // private void Update(){
+    //     if()
+    // }
     public void Damage() {
         //enemy hurt animation is trigger
         spriteAnimator.SetTrigger("Damage");
-        health-=1;
-        if(health <= 0){
+        enemyHealth.Damage(1);
+        if(enemyHealth.GetHealth() <= 0){
             Destroy(gameObject);
         }
 
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collider){
+        if(collider.CompareTag("Projectile_player")){
+            Debug.Log("COLLISIONS with bullet");
+            Damage();
+        }
+    }
+    
     // public Vector3 GetPosition(){
     //     return transform.position;
     // }

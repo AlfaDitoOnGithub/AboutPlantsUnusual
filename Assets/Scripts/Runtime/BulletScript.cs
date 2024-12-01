@@ -24,11 +24,11 @@ public class BulletScript : MonoBehaviour
 
    
    private void OnTriggerEnter2D(Collider2D collider)
-   {    EnemyHitbox enemy = collider.GetComponent<EnemyHitbox>();
-    if ( enemy != null)
+   {    
+    if (collider.CompareTag("enemy"))
     {
-         enemy.Damage();
-         Destroy(gameObject);
+        Debug.Log("COLLISION with enemy");
+        Destroy(gameObject);
     }       
    }
 }
