@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
   
     private PlayerAnimator _playerAnimator; 
     private Rigidbody2D _rb;
-    // private HealthBarScript healthBar;
+    
    
    
     void Start()
@@ -54,8 +54,5 @@ public class PlayerController : MonoBehaviour
         //transform.Translate(direction * mSpd * Time.deltaTime);
     }
 
-    void Attack(){
-        //manages player attack melee or range
-    }
 
 }

@@ -27,6 +27,10 @@ public class PlayerAnimator : MonoBehaviour
         _animator.SetTrigger("Hurt");
     }
 
+    public void playDeadAnimation(){
+        _animator.SetBool("IsDead", true);
+    }
+
     public void flipSprite(bool isFlip){
         _spriteRenderer.flipX = isFlip;
     }

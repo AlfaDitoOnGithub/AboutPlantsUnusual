@@ -6,22 +6,27 @@ using UnityEngine.UI;
 public class HealthbarScript : MonoBehaviour
 {
     public Slider healthBarSlider;
-    public int maxHealth = 10;
+    public int maxHealth;
     public int currHealth;
+    public HealthSystem UIPlayerHealth;
+    [SerializeField] private HurtboxController _hc;
 
-    private HurtboxController hero;
     
-    // Start is called before the first frame update
-    void Start()
-    {   currHealth = hero.playerHealth.GetCurrHealth();
-        maxHealth = hero.playerHealth.GetMaxHealth();
+   
+    void Awake()
+    {   
+        
+        UIPlayerHealth = _hc.playerHealth;
+        currHealth = UIPlayerHealth.GetCurrHealth();
+        maxHealth = UIPlayerHealth.GetMaxHealth();
 
     }
 
-    // Update is called once per frame
     void Update()
     {
+        currHealth = UIPlayerHealth.GetCurrHealth();
         healthBarSlider.value = currHealth;
-        healthBarSlider.maxValue = maxHealth;
+        // healthBarSlider.maxValue = maxHealth;
     }
+
 }
