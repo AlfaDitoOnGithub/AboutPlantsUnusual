@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using CodeMonkey.Utils;
 
 
 public class HurtboxController : MonoBehaviour
@@ -13,6 +14,13 @@ public class HurtboxController : MonoBehaviour
     // private Rigidbody2D _rb;
    
     public HealthSystem playerHealth;
+    public event EventHandler<healthArgs> healthBarAdj;
+    public class healthArgs : EventArgs {
+        public int currHealth;
+       
+    }
+
+    [SerializeField] private float iFramesDuration;
 
 
     void Start()
@@ -50,6 +58,7 @@ public class HurtboxController : MonoBehaviour
         {
             //do something
             Hurt();
+            
         }
     }
 
@@ -57,14 +66,28 @@ public class HurtboxController : MonoBehaviour
     [ContextMenu("testHurt")]
     void Hurt(){
         //manages player health and damage taken
+        StartCoroutine(Invulnerable());
         playerHealth.Damage(1);
         _playerAnimator.playHurtAnimation();
+        healthBarAdj?.Invoke(this, new healthArgs{
+            currHealth = playerHealth.GetCurrHealth()
+        });
 
         if(playerHealth.GetCurrHealth() <= 0){
             //GAME OVER SCREEN
+            _playerAnimator.playDeadAnimation();
             Debug.Log("GAME OVER");
         }
 
+    }
+
+    private IEnumerator Invulnerable(){
+        Physics2D.IgnoreLayerCollision(6,7, true);
+        while(iFramesDuration > 0){
+            yield return new WaitForSeconds(0.5f);
+            iFramesDuration--;
+        }
+        Physics2D.IgnoreLayerCollision(6,7, false);
     }
    
 
