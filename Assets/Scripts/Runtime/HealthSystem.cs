@@ -1,27 +1,32 @@
 
 public class HealthSystem 
 {
-    private int health;
+    private int currHealth;
     private int maxHealth;
     public HealthSystem(int health) {
-        this.health = health;
+        this.currHealth = health;
+        this.maxHealth = health;
     }
 
-    public int GetHealth(){
-        return health;
+    public int GetCurrHealth(){
+        return currHealth;
+    }
+
+    public int GetMaxHealth(){
+        return maxHealth;
     }
 
     public void Damage(int damageAmount){
-        health -= damageAmount;
-        if(health < 0){health = 0;};
+        currHealth -= damageAmount;
+        if(currHealth < 0){currHealth = 0;};
     }
 
     public void Heal(int healAmount){
-        health += healAmount;
-        if(health > maxHealth){health = maxHealth;}
+        currHealth += healAmount;
+        if(currHealth > maxHealth){currHealth = maxHealth;}
     }
 
     public float GetPercentHealth(){
-        return (float) health/maxHealth;
+        return (float) currHealth/maxHealth;
     }
 }

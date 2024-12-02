@@ -27,7 +27,7 @@ private HealthSystem enemyHealth;
         //enemy hurt animation is trigger
         spriteAnimator.SetTrigger("Damage");
         enemyHealth.Damage(1);
-        if(enemyHealth.GetHealth() <= 0){
+        if(enemyHealth.GetCurrHealth() <= 0){
             Destroy(gameObject);
         }
 

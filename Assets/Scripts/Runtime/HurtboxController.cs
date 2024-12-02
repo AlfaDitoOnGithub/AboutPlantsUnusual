@@ -2,17 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 
 public class HurtboxController : MonoBehaviour
 {
-    [SerializeField] private bool enemyAttack = false;
+     private bool enemyAttack = false;
     
     
     private PlayerAnimator _playerAnimator; 
     // private Rigidbody2D _rb;
-    private HealthSystem playerHealth;
+    public HealthSystem playerHealth;
 
 
     void Start()
