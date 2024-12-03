@@ -26,9 +26,11 @@ private HealthSystem enemyHealth;
     public void Damage() {
         //enemy hurt animation is trigger
         spriteAnimator.SetTrigger("Damage");
+        SoundManager.PlaySound(SoundType.EnemyDamaged);
         enemyHealth.Damage(1);
         if(enemyHealth.GetCurrHealth() <= 0){
             spriteAnimator.SetBool("IsDead",true);
+            SoundManager.PlaySound(SoundType.EnemyDeath);
         }
 
 

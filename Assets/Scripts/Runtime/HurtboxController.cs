@@ -69,6 +69,7 @@ public class HurtboxController : MonoBehaviour
         StartCoroutine(Invulnerable());
         playerHealth.Damage(1);
         _playerAnimator.playHurtAnimation();
+        SoundManager.PlaySound(SoundType.PlayerHurt);
         healthBarAdj?.Invoke(this, new healthArgs{
             currHealth = playerHealth.GetCurrHealth()
         });

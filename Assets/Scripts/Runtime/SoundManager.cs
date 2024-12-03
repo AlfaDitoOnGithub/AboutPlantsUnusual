@@ -4,16 +4,14 @@ using UnityEngine;
 using System;
 
 public enum SoundType {
-    ambience, //0
-    playerShoot, //1
-    playerHurt,//2
-    playerMove,//3
-    playerDeath,//4
-    gateAndLever,//5
-    frogDamaged,//6
-    frogDeath, //7
-    slimeDamaged,//8
-    slimeDeath,//9
+    Ambience, //0
+    PlayerShoot, //1
+    PlayerHurt,//2
+    PlayerMove,//3
+    PlayerDeath,//4
+    GateAndLever,//5
+    EnemyDamaged,//6
+    EnemyDeath, //7
 
 }
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]

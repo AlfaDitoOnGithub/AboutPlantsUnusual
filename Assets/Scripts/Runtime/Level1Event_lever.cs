@@ -52,6 +52,7 @@ public class Level1Event_lever : MonoBehaviour
     Debug.Log("Gerbang dibuka");
     if(gerbang.transform.position.y < -25.0f){
     gerbang.transform.Translate(0.0f, 4.0f, 0.0f);
+    SoundManager.PlaySound(SoundType.GateAndLever);
         
     }
     Debug.Log("posisi gerbang besi kedua=" + gerbang.transform.position);
