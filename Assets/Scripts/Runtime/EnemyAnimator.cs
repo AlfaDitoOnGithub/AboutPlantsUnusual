@@ -26,6 +26,10 @@ public class EnemyAnimator : MonoBehaviour
         _spriteRenderer.flipX = isFlip;
     }
 
+    public void playAttackAnimation(){
+        _animator.SetTrigger("IsAttack");
+    }
+
     // Update is called once per frame
     void Update()
     {

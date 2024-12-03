@@ -28,7 +28,7 @@ private HealthSystem enemyHealth;
         spriteAnimator.SetTrigger("Damage");
         enemyHealth.Damage(1);
         if(enemyHealth.GetCurrHealth() <= 0){
-            Destroy(gameObject);
+            spriteAnimator.SetBool("IsDead",true);
         }
 
 
@@ -39,6 +39,10 @@ private HealthSystem enemyHealth;
             Debug.Log("COLLISIONS with bullet");
             Damage();
         }
+    }
+
+    private void DestroyOnAnimationEnd(){
+        Destroy(gameObject);
     }
     
     // public Vector3 GetPosition(){

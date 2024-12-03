@@ -22,6 +22,7 @@ public class EnemyBehavior : MonoBehaviour
     private void Awake()
     {
         state = State.Roaming;
+        _enemyAnimator = GetComponent<EnemyAnimator>();
     }
     void Start()
     {   
@@ -36,33 +37,56 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
         switch (state)
         {            
         default:
         case State.Roaming:
             agent.SetDestination(roamPosition);
+         
+            if(roamPosition.x < startingPosition.x) {
+                _enemyAnimator.flipSprite(true);
+            }
+            if(roamPosition.x > startingPosition.x){
+                _enemyAnimator.flipSprite(false);
+            }
             _enemyAnimator.playRunAnimation();
+
             float reachedPositionDistance = 1f;
             if(Vector3.Distance(transform.position, roamPosition) < reachedPositionDistance){
             //reached destination
             _enemyAnimator.playIdleAnimation();
             roamPosition = GetRoamingPosition();
+            agent.SetDestination(roamPosition);
             }
             FindTarget();          
             break;
         case State.ChaseTarget:
+            _enemyAnimator.playRunAnimation();
             agent.SetDestination(target.position);
+            
+            if(target.position.x < transform.position.x) {
+            _enemyAnimator.flipSprite(true);
+            }
+            if(target.position.x > transform.position.x) {
+            _enemyAnimator.flipSprite(false);
+            }
+            FindTarget();
+
             break;
 
         }
+
+        
         
     }
     private Vector3 GetRoamingPosition() {
-        return startingPosition + UtilsClass.GetRandomDir() * Random.Range(10f,70f);
+        return startingPosition + UtilsClass.GetRandomDir() * Random.Range(5f,20f);
     }
 
     private void FindTarget(){
-        float targetRange = 40f;
+        float targetRange = 20f;
         if(Vector3.Distance(transform.position, target.position) < targetRange){
             //target in range
             state = State.ChaseTarget;
