@@ -12,6 +12,9 @@ public enum SoundType {
     GateAndLever,//5
     EnemyDamaged,//6
     EnemyDeath, //7
+    MenuInteract,
+    MenuHover,
+    MenuBack,
 
 }
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
