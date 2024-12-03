@@ -61,6 +61,7 @@ public class AimController : MonoBehaviour
                 gunEndPointPosition = gunEndPointTransform.position,
                 shootPosition = mousePosition,
             });
+            SoundManager.PlaySound(SoundType.playerShoot);
         }
     }
 
