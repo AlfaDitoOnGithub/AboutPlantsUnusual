@@ -84,7 +84,7 @@ public class HurtboxController : MonoBehaviour
     private IEnumerator Invulnerable(){
         Physics2D.IgnoreLayerCollision(6,7, true);
         while(iFramesDuration > 0){
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(2f);
             iFramesDuration--;
         }
         Physics2D.IgnoreLayerCollision(6,7, false);

@@ -41,9 +41,11 @@ public class EnemyBehavior : MonoBehaviour
         default:
         case State.Roaming:
             agent.SetDestination(roamPosition);
+            _enemyAnimator.playRunAnimation();
             float reachedPositionDistance = 1f;
             if(Vector3.Distance(transform.position, roamPosition) < reachedPositionDistance){
             //reached destination
+            _enemyAnimator.playIdleAnimation();
             roamPosition = GetRoamingPosition();
             }
             FindTarget();          
@@ -60,11 +62,12 @@ public class EnemyBehavior : MonoBehaviour
     }
 
     private void FindTarget(){
-        float targetRange = 50f;
+        float targetRange = 40f;
         if(Vector3.Distance(transform.position, target.position) < targetRange){
             //target in range
             state = State.ChaseTarget;
         }
+        else {state = State.Roaming;}
     }
 
 }

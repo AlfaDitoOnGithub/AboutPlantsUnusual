@@ -7,7 +7,7 @@ using CodeMonkey.Utils;
 public class EnemyHitbox : MonoBehaviour {
 
 
-private Transform spriteTransform;
+// private Transform spriteTransform;
 private Animator spriteAnimator;
 [SerializeField] private int health = 3;
 // private bool bulletContact =false;
@@ -15,8 +15,8 @@ private HealthSystem enemyHealth;
 
     private void Start()
     {
-        spriteTransform = transform.Find("Sprite");
-        spriteAnimator = spriteTransform.GetComponent<Animator>();
+        // spriteTransform = transform.Find("Sprite");
+        spriteAnimator = GetComponent<Animator>();
         enemyHealth = new HealthSystem(health);
     }
 

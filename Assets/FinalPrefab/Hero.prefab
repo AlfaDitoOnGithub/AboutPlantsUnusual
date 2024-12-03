@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eeca4152aa121448a8ffe78fd49dc42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iFramesDuration: 1
+  iFramesDuration: 2
 --- !u!61 &4396846769962002409
 BoxCollider2D:
   m_ObjectHideFlags: 0
