@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Level3Event_lever : MonoBehaviour
+public class Level1Event_lever : MonoBehaviour
 {
    [SerializeField] private bool leverActivate = false;
    [SerializeField] private GameObject uiTextPrompt;
