@@ -6,10 +6,23 @@ public class MainMenuScript : MonoBehaviour
 {
         
     
-    public void PlayNowButton()
+    public void PlayLevel1Button()
     {
         // Play Now Button has been pressed, here you can initialize your game (For example Load a Scene called GameLevel etc.)
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameLevel");
+        SoundManager.PlaySound(SoundType.MenuInteract);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_1");
+    }
+    public void PlayLevel2Button()
+    {
+        // Play Now Button has been pressed, here you can initialize your game (For example Load a Scene called GameLevel etc.)
+        SoundManager.PlaySound(SoundType.MenuInteract);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_2");
+    }
+    public void PlayLevel3Button()
+    {
+        // Play Now Button has been pressed, here you can initialize your game (For example Load a Scene called GameLevel etc.)
+        SoundManager.PlaySound(SoundType.MenuInteract);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level_3");
     }
 
     public void CreditsButton()
