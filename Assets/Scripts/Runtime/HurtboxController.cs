@@ -11,6 +11,7 @@ public class HurtboxController : MonoBehaviour
     private bool enemyAttack = false;
         
     private PlayerAnimator _playerAnimator; 
+    [SerializeField] GameObject _gameOverUI;
     // private Rigidbody2D _rb;
    
     public HealthSystem playerHealth;
@@ -77,6 +78,8 @@ public class HurtboxController : MonoBehaviour
         if(playerHealth.GetCurrHealth() <= 0){
             //GAME OVER SCREEN
             _playerAnimator.playDeadAnimation();
+            _gameOverUI.SetActive(true);
+            
             Debug.Log("GAME OVER");
         }
 

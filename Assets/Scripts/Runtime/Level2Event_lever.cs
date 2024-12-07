@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Level1Event_lever : MonoBehaviour
+public class Level2Event_lever : MonoBehaviour
 {
    [SerializeField] private bool leverActivate = false;
    [SerializeField] private GameObject uiTextPrompt;
@@ -36,7 +36,6 @@ public class Level1Event_lever : MonoBehaviour
    /// </summary>
    void Update()
    {
-        
        if (leverActivate && Input.GetKeyDown(KeyCode.F)){
         Debug.Log("posisi gerbang besi pertama=" + gerbang.transform.position);
         Interact();

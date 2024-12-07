@@ -4,18 +4,24 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Level1Event_lever : MonoBehaviour
+public class Level2Event_gate : MonoBehaviour
 {
-   [SerializeField] private bool leverActivate = false;
+   
    [SerializeField] private GameObject uiTextPrompt;
+   [SerializeField] private GameObject uiText;
    [SerializeField] private GameObject gerbang;
-   public UnityEvent gateOpen;
+   [SerializeField] private bool tutup;
+
+   
+   
+
+   public UnityEvent findLever;
 
    public void OnTriggerEnter2D(Collider2D other)
    {
        if (other.CompareTag("Player"))
        {
-        leverActivate = true;
+        tutup = true;
         uiTextPrompt.SetActive(true);
         Debug.Log("Player Masuk");
        }
@@ -25,9 +31,10 @@ public class Level1Event_lever : MonoBehaviour
    {
        if (other.CompareTag("Player"))
        {
-        leverActivate = false;
+        tutup = false;
         Debug.Log("Player Keluar");
         uiTextPrompt.SetActive(false);
+        uiText.SetActive(false);
        }
    }
 
@@ -36,9 +43,8 @@ public class Level1Event_lever : MonoBehaviour
    /// </summary>
    void Update()
    {
-        
-       if (leverActivate && Input.GetKeyDown(KeyCode.F)){
-        Debug.Log("posisi gerbang besi pertama=" + gerbang.transform.position);
+       if (tutup && Input.GetKeyDown(KeyCode.F)){
+       
         Interact();
         Debug.Log("Tombol dipencet");
         
@@ -47,18 +53,9 @@ public class Level1Event_lever : MonoBehaviour
       
    }
    public void Interact(){
-
-    
-    gateOpen.Invoke();
-    Debug.Log("Gerbang dibuka");
     if(gerbang.transform.position.y < -25.0f){
-    gerbang.transform.Translate(0.0f, 4.0f, 0.0f);
-    SoundManager.PlaySound(SoundType.GateAndLever);
-        
+        findLever.Invoke();
     }
-    Debug.Log("posisi gerbang besi kedua=" + gerbang.transform.position);
-      
-
 
    }
 

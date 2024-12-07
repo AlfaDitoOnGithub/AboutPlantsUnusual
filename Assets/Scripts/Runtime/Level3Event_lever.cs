@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Level1Event_lever : MonoBehaviour
+public class Level3Event_lever : MonoBehaviour
 {
    [SerializeField] private bool leverActivate = false;
    [SerializeField] private GameObject uiTextPrompt;
@@ -50,7 +50,7 @@ public class Level1Event_lever : MonoBehaviour
     
     gateOpen.Invoke();
     Debug.Log("Gerbang dibuka");
-    if(gerbang.transform.position.y < -25.0f){
+    if(gerbang.transform.position.y < -3.0f){
     gerbang.transform.Translate(0.0f, 4.0f, 0.0f);
     SoundManager.PlaySound(SoundType.GateAndLever);
         
