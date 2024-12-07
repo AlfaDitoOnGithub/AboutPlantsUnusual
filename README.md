@@ -1,7 +1,10 @@
 # AboutPlantsUnusual
 Game untuk Stupen IL Batch 7
 
-### untuk kelompok
-https://youtu.be/tTIlDb71t2s <- lakukan hal ini untuk menyambung unity dan github
+Game ini menggunakan Unity 2022.3 LTS untuk pengembangannya,
+Sebuah 2D Top-Down shooter yang sangat sederhana.
 
-pakai Desktop client biar mudah, dan copy repo ini lewat sana 
+Ada beberapa ide yang bisa dimasukkan dan dikembangkan di dalamnya. 
+but overall its a good first project for 4-6 weeks of development.
+
+
