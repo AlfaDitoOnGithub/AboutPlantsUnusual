@@ -53,7 +53,7 @@ public class Level2Event_gate : MonoBehaviour
       
    }
    public void Interact(){
-    if(gerbang.transform.position.y < -25.0f){
+    if(gerbang.transform.position.y < 12.0f){
         findLever.Invoke();
     }
 

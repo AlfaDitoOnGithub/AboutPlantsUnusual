@@ -8,7 +8,7 @@ public class Level3Event_lever : MonoBehaviour
 {
    [SerializeField] private bool leverActivate = false;
    [SerializeField] private GameObject uiTextPrompt;
-   [SerializeField] private GameObject gerbang;
+//    [SerializeField] private GameObject gerbang;
    public UnityEvent gateOpen;
 
    public void OnTriggerEnter2D(Collider2D other)
@@ -37,7 +37,6 @@ public class Level3Event_lever : MonoBehaviour
    void Update()
    {
        if (leverActivate && Input.GetKeyDown(KeyCode.F)){
-        Debug.Log("posisi gerbang besi pertama=" + gerbang.transform.position);
         Interact();
         Debug.Log("Tombol dipencet");
         
@@ -50,15 +49,12 @@ public class Level3Event_lever : MonoBehaviour
     
     gateOpen.Invoke();
     Debug.Log("Gerbang dibuka");
-    if(gerbang.transform.position.y < -3.0f){
-    gerbang.transform.Translate(0.0f, 4.0f, 0.0f);
-    SoundManager.PlaySound(SoundType.GateAndLever);
-        
+       SoundManager.PlaySound(SoundType.GateAndLever);
     }
-    Debug.Log("posisi gerbang besi kedua=" + gerbang.transform.position);
+    
       
 
 
-   }
-
 }
+
+

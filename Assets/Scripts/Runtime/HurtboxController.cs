@@ -79,6 +79,7 @@ public class HurtboxController : MonoBehaviour
             //GAME OVER SCREEN
             _playerAnimator.playDeadAnimation();
             _gameOverUI.SetActive(true);
+            Destroy(gameObject);
             
             Debug.Log("GAME OVER");
         }

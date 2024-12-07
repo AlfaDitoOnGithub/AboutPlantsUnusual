@@ -50,8 +50,8 @@ public class Level2Event_lever : MonoBehaviour
     
     gateOpen.Invoke();
     Debug.Log("Gerbang dibuka");
-    if(gerbang.transform.position.y < -25.0f){
-    gerbang.transform.Translate(0.0f, 4.0f, 0.0f);
+    if(gerbang.transform.position.y < 12.0f){
+    gerbang.transform.Translate(0.0f, 2.0f, 0.0f);
     SoundManager.PlaySound(SoundType.GateAndLever);
         
     }

@@ -9,7 +9,7 @@ public class Level3Event_gate : MonoBehaviour
    
    [SerializeField] private GameObject uiTextPrompt;
    [SerializeField] private GameObject uiText;
-   [SerializeField] private GameObject gerbang;
+   [SerializeField] private SpriteRenderer gerbangSprite;
    [SerializeField] private bool tutup;
 
    
@@ -53,7 +53,7 @@ public class Level3Event_gate : MonoBehaviour
       
    }
    public void Interact(){
-    if(gerbang.transform.position.y < -3.0f){
+    if(!gerbangSprite.enabled){
         findLever.Invoke();
     }
 
